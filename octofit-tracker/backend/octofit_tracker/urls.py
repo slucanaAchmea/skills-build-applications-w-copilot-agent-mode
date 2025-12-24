@@ -1,3 +1,12 @@
+import os
+from django.http import JsonResponse
+def codespace_url_view(request):
+    codespace_name = os.environ.get('CODESPACE_NAME', 'localhost')
+    if codespace_name and codespace_name != 'localhost':
+        url = f"https://{codespace_name}-8000.app.github.dev"
+    else:
+        url = "http://localhost:8000"
+    return JsonResponse({"codespace_url": url})
 from django.http import HttpResponse
 def root_view(request):
     return HttpResponse("Welcome to the Octofit Tracker API. Visit /api/ for the REST API.")
@@ -23,6 +32,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', root_view, name='root'),
+    path('codespace-url/', codespace_url_view, name='codespace-url'),
     path('admin/', admin.site.urls),
     path('api/', include('tracker.urls')),
 ]
