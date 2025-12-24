@@ -1,0 +1,132 @@
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #22223b;
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 60px;
+  width: auto;
+  margin-right: 16px;
+  vertical-align: middle;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+
+.App-link, .navbar-nav .nav-link, a {
+  color: #3a86ff;
+  transition: color 0.2s;
+}
+.App-link:hover, .navbar-nav .nav-link:hover, a:hover {
+  color: #ff006e;
+  text-decoration: underline;
+}
+
+/* Table Styling */
+table.table {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  overflow: hidden;
+}
+thead.table-primary, thead.table-success, thead.table-info, thead.table-warning, thead.table-danger {
+  color: #fff;
+}
+thead.table-primary { background: #3a86ff; }
+thead.table-success { background: #06d6a0; }
+thead.table-info { background: #00b4d8; }
+thead.table-warning { background: #ffbe0b; }
+thead.table-danger { background: #ff006e; }
+
+/* Button Styling */
+.btn-primary {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #8338ec 0%, #3a86ff 100%);
+  color: #fff;
+}
+.btn-success {
+  background: linear-gradient(90deg, #06d6a0 0%, #00b4d8 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-success:hover {
+  background: linear-gradient(90deg, #00b4d8 0%, #06d6a0 100%);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .card-title {
+  color: #3a0ca3;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+}
+.navbar-brand {
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:focus {
+  color: #ffbe0b !important;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+  border: none;
+}
+
+/* Favicon (for demonstration, actual icon is in public) */
+link[rel~="icon"] {
+  border-radius: 50%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
