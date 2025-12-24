@@ -11,6 +11,5 @@ router.register(r'workouts', views.WorkoutViewSet)
 router.register(r'leaderboard', views.LeaderboardViewSet)
 
 urlpatterns = [
-    path('', views.api_root, name='api-root'),
     path('', include(router.urls)),
 ]

@@ -1,3 +1,6 @@
+from django.http import HttpResponse
+def root_view(request):
+    return HttpResponse("Welcome to the Octofit Tracker API. Visit /api/ for the REST API.")
 """octofit_tracker URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -14,12 +17,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+
 from django.contrib import admin
 from django.urls import path, include
-from tracker import views as tracker_views
 
 urlpatterns = [
-    path('', tracker_views.api_root, name='api-root'),
+    path('', root_view, name='root'),
     path('admin/', admin.site.urls),
-    path('tracker/', include('tracker.urls')),
+    path('api/', include('tracker.urls')),
 ]
